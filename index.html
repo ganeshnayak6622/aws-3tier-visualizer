@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AWS 3-Tier Visualizer – Ravi's Online Business</title>
+<link rel="icon" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+ <div><h1>AWS Three-Tier Visualizer</h1><p>Ravi's online business, inside a secure AWS campus.</p></div>
+ <div class="tools">
+  <div class="seg" role="group" aria-label="Explanation mode"><button id="mB" aria-pressed="true">Beginner</button><button id="mT" aria-pressed="false">Technical</button></div>
+  <button id="theme" aria-label="Switch light or dark page theme">Theme</button>
+ </div>
+</header>
+<div class="app">
+ <aside>
+  <nav id="steps" aria-label="Learning steps"></nav>
+  <div class="ctl">
+   <button id="play">Auto-play</button><button id="pause">Pause</button><button id="reset">Reset</button>
+   <span id="prog" aria-live="polite">1/9</span>
+  </div>
+  <div class="ctl"><button id="flow">Traffic flow</button><button id="fail" aria-pressed="false">Simulate AZ 1a failure</button></div>
+  <ul class="legend" aria-label="Legend"><li>✉️ Customer request</li><li>💾 App/database data</li><li>🔁 Replication</li><li>📦 Software update</li><li>😈 Intruder</li><li>🔒 VPN</li><li>🤝 VPC peering</li></ul>
+ </aside>
+ <main>
+  <div class="diagram" id="dia" role="img" aria-label="Animated AWS three-tier architecture diagram"></div>
+  <p id="flowCap" class="cap" aria-live="polite"></p>
+  <section class="card" id="card" aria-live="polite"></section>
+  <section class="sum" id="sum"></section>
+  <section class="gl"><h2>Glossary</h2><input id="q" type="search" placeholder="Search terms, e.g. NAT, subnet" aria-label="Search glossary"><div id="gl"></div></section>
+ </main>
+</div>
+<script src="js/steps.js"></script><script src="js/animations.js"></script><script src="js/architecture.js"></script><script src="js/app.js"></script>
+</body></html>
